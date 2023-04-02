@@ -12,38 +12,16 @@ import Me from '../assets/me.jpg'
 export default function Home() {
   return (
 
-    <div style={{ backgroundImage:`url(${"https://i.pinimg.com/originals/c9/84/d6/c984d66728f6dadd828777975e48b3fd.gif"})`, height: '100%',  backgroundRepeat:"no-repeat", backgroundSize:"cover", boxShadow: "23 yellow" }}>
-        <Grid container sx={{ p: 5 }} >{/*Row*/ }
-            <Grid item container direction="column" lg={7} md={6} sm={12} >{/*Column 1*/}
-                <Grid item container>{/*Row */}
-                    <Grid item container   lg={3} >
-        
-                    </Grid>
-                    <Grid item container  lg={9}>
-                        <Card elevation={0}>
-                            <CardContent align="left">
-                                <Typography variant="h5" color="text.secondary" gutterBottom>
-                                    Hi! My name is
-                                </Typography>
-                                <Typography variant="h1">
-                                    Hector!
-                                </Typography>
-                                <Typography variant="h4">
-                                    I love learning and creating new stuff
-                                </Typography>
-                            </CardContent>
-                        </Card>
-                    </Grid>
-                </Grid>
+    <div style={{ backgroundImage:`url(${"https://i.pinimg.com/originals/c9/84/d6/c984d66728f6dadd828777975e48b3fd.gif"})`, height: '100%',  backgroundRepeat:"no-repeat", backgroundSize:"cover", }}>
+        <Grid container sx={{ p: 5 }}>{/*Row*/ }
+            <Grid item lg={5} md={12} sm={12} xs={12} >{/**Column 2 */}
+                <Typography variant='h2' sx={{fontWeight: "bold"}}>MY NAME IS HECTOR</Typography>
             </Grid>
-
-            <Grid item container direction="column" lg={5} md={6} sm={12}>{/**Column 2 */}
+            <Grid item lg={7} md={12} sm={12} xs={12}>{/**Column 2 */}
                 <Box
                     component="img"
                     sx={{
-                    width: {sm: "75%" },
-                    
-                    
+                    width: {sm: "100%", xs: "100%", md:"50%", lg:"40%", xl:"40%" },
                 boxShadow: 23    
                 }}
                     src={Me}

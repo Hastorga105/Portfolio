@@ -45,7 +45,7 @@ function App() {
     <ThemeProvider theme={myTheme}>
       <CssBaseline />
       <Box className="App" sx ={{ pt: 5, px:-2 }}>
-    <Router>
+    <Router  basename={process.env.PUBLIC_URL}>
       <Navbar/>
         <Routes>
         <Route path="/" element={<Home/>}></Route>
