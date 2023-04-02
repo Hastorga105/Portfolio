@@ -3,6 +3,7 @@ import Proj2 from "../assets/Proj2-1.gif"
 import Proj3 from "../assets/Proj3.jpg"
 import Proj41 from "../assets/Project4-1.png"
 import Blank from "../assets/Blank.png"
+import Proj32 from "../assets/RenderDancing.gif"
 
 export const ProjectList = [
     {
@@ -22,13 +23,20 @@ export const ProjectList = [
     },
     {
         name: "Unity Render Game",
-        image: Proj3,
+        image: Proj32,
         overview: "As a way of learning the basics of the Unity game engine, I developed a game based on my university and its mascot Rendo. In this project I used basic concepts of C# and knowledge from one of my passions 3D modeling.",
         skills: "C#, Unity, Blender",
         link:"https://github.com/Hastorga105/Render-Game-Unity"
     },
     {
         name: "Android studio API REST APP",
+        image: Proj41,
+        overview: "This is one of the simpler projects, here I learned how to retrieve data from an API and display it on an android app.",
+        skills: "Android Studio, Kotlin, Jetpack Compose",
+        link:"https://github.com/Hastorga105/androidAPIexercise"
+    },
+    {
+        name: "Personal Portfolio",
         image: Proj41,
         overview: "This is one of the simpler projects, here I learned how to retrieve data from an API and display it on an android app.",
         skills: "Javascript",

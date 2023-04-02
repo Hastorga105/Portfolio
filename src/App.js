@@ -15,6 +15,20 @@ import CssBaseline from '@mui/material/CssBaseline';
 import "./styles/styles.css"
 import { DarkMode } from '@mui/icons-material';
 
+import { useEffect, useState } from 'react';
+
+import { Card } from "@mui/material";
+
+import Button from '@mui/material/Button';
+import { styled } from '@mui/material/styles';
+import Dialog from '@mui/material/Dialog';
+import DialogTitle from '@mui/material/DialogTitle';
+import DialogContent from '@mui/material/DialogContent';
+import DialogActions from '@mui/material/DialogActions';
+import IconButton from '@mui/material/IconButton';
+import CloseIcon from '@mui/icons-material/Close';
+import Typography from '@mui/material/Typography';
+
 const myTheme = createTheme({
   palette: {
     mode: "dark",
@@ -41,7 +55,58 @@ const myTheme = createTheme({
 });
 
 function App() {
+
+  //variable to display popup
+  const [displayPopUp, setDisplayPopUp] = useState(true);
+  
+  const closePopUp = () => {//when you close the popup
+    // already seen the popup
+    localStorage.setItem("seenPopUp", true);
+    // stop displaying
+    setDisplayPopUp(false);
+  };
+
+  useEffect(() => {
+    // Check the seenPopup variable
+    let returningUser = localStorage.getItem("seenPopUp");
+    // See if user has seen the popup
+    setDisplayPopUp(!returningUser);
+  }, []);
+
   return (
+  <>
+    <div>
+      {/* conditional rendering, if displayPopUp is truthy we will show the modal */}
+        {displayPopUp && (
+          <Dialog
+            open={true}
+// once pop-up will close "closePopUp" function will be executed
+            onClose={closePopUp}
+          >
+            
+            <DialogTitle onClose={closePopUp}>
+            Modal title
+            </DialogTitle>
+            <DialogContent dividers>
+              <Typography >
+                This website is still in constant development, some of its content may be unfinished and or broken, please take that in mind.
+              </Typography>
+              <Typography >
+                Thank you so much for visiting my portfolio, I hope you like it!
+              </Typography>
+            </DialogContent>
+            <DialogActions>
+              <Button  onClick={closePopUp}>
+                Ok, I understand
+              </Button>
+            </DialogActions>
+          
+            
+                </Dialog>
+              )}
+            </div>
+      {/* this is the main content of this page */}
+
     <ThemeProvider theme={myTheme}>
       <CssBaseline />
       <Box className="App" sx ={{ pt: 5, px:-2 }}>
@@ -57,6 +122,7 @@ function App() {
     </Router>
     </Box>
     </ThemeProvider>
+  </>
     
   );
 }

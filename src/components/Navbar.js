@@ -52,8 +52,8 @@ ElevationScroll.propTypes = {
 
 
 
-const pages = ['Home', 'Projects', 'Experience'];
-const settings = ['/', '/home', '/experience'];
+const pages = [/*'Home', 'Projects', 'Experience'*/];
+const settings = [/*'/Portfolio', '/home', '/experience'*/];
 
 export default function Navbar(props) {
 
@@ -87,7 +87,7 @@ export default function Navbar(props) {
             variant="h6"
             noWrap
             component="a"
-            href="/"
+            href="/Portfolio"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
@@ -101,8 +101,9 @@ export default function Navbar(props) {
             HECTOR ASTORGA
           </Typography>
 
+
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
+            {/*<IconButton
               size="large"
               aria-label="account of current user"
               aria-controls="menu-appbar"
@@ -130,7 +131,8 @@ export default function Navbar(props) {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
+              {/*
+            {pages.map((page) => (
 
 
                 <Link to={page}>
@@ -142,7 +144,10 @@ export default function Navbar(props) {
 
 
               ))}
-            </Menu>
+            
+            
+              
+            </Menu>*/}
           </Box>
           
           <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />

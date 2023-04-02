@@ -5,10 +5,24 @@ import Experience from './Experience';
 import Divider from '@mui/material/Divider';
 import TIKnow from './Skills'
 
+
+
+
+
 export default function Home() {
+  
+  
+
+
+
+
   return (
 
     <div>
+
+      
+        <div>
+              
         <Me sx={{my: 10}}/>
         <Divider sx={{my: 5}}></Divider>
         <Projects sx={{my: 10}}/>
@@ -17,6 +31,10 @@ export default function Home() {
         <Divider sx={{my: 5}}></Divider>
         <Experience  sx={{m: 10}}></Experience>
         <Divider sx={{my: 5}}></Divider>
+      </div>
+
+
+
     </div>
   )
 }
