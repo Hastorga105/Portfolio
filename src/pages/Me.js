@@ -14,10 +14,10 @@ export default function Home() {
 
     <div style={{ backgroundImage:`url(${"https://i.pinimg.com/originals/c9/84/d6/c984d66728f6dadd828777975e48b3fd.gif"})`, height: '100%',  backgroundRepeat:"no-repeat", backgroundSize:"cover", }}>
         <Grid container sx={{ p: 5 }}>{/*Row*/ }
-            <Grid item lg={5} md={12} sm={12} xs={12} >{/**Column 2 */}
+            <Grid item lg={6} md={12} sm={12} xs={12} >{/**Column 2 */}
                 <Typography variant='h2' sx={{fontWeight: "bold"}}>MY NAME IS HECTOR</Typography>
             </Grid>
-            <Grid item lg={7} md={12} sm={12} xs={12}>{/**Column 2 */}
+            <Grid item lg={6} md={12} sm={12} xs={12}>{/**Column 2 */}
                 <Box
                     component="img"
                     sx={{

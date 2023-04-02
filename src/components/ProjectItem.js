@@ -16,18 +16,18 @@ export default function ProjectItem({image, name, id}) {
   }
 
   return (
-    <Box sx={{backgroundColor: 'primary',}}>
+    <Box sx={{px:{xs:3, md:1, lg:0}}}>
       <Grid container
       direction="column"
       align="left"
       style={{ display: "flex", justifyContent: "flex-end", }}
-      sx={{  }}
+      sx={elsx}
       >
         <Card onClick={() => {
       navigate("/projects/" + id)
       }} align = "center"
-      style={{height: '18vw' }}
-      sx={elsx}
+      
+      sx={{height:{xs: "70vw",sm: "60vw", md:"44vw", lg:"18vw", xl:"18vw"}}}
       >
         <Grid 
           item
