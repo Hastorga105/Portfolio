@@ -10,7 +10,7 @@ export const SkillsList = [
 
     },
     {
-        name: "React JS",
+        name: "ReactJS",
         image: (
             <svg height="150" viewBox="175.7 78 490.6 436.9" width="150" xmlns="http://www.w3.org/2000/svg">
             <g fill="#fff">
@@ -21,7 +21,7 @@ export const SkillsList = [
             ),
     },
     {
-        name: "Vue JS",
+        name: "VueJS",
         image: (
             <svg enable-background="new 0 0 2500 2165.1" viewBox="0 0 2500 2165.1" height="150" width="150">
             <path d="m1538.7 0-288.7 500-288.7-500h-961.3l1250 2165.1 1250-2165.1z" fill="#fff"/>

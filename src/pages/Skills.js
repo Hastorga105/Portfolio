@@ -14,7 +14,7 @@ export default function ThingsIKnow
 
         {SkillsList.map((skill, idx) => { {/*Loops trhough the ProjectList Like a foreach project}*/}
                 return (
-                  <Grid item xs={12} sm={6}  md={4} lg={4}  xl={3} sx={{my:3}}>
+                  <Grid item xs={6} sm={4}  md={4} lg={4}  xl={3} sx={{my:3}}>
                      <Skill  id={idx} name={skill.name} image={skill.image} /> 
                   </Grid>
                 )
