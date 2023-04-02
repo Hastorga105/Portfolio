@@ -27,7 +27,7 @@ export default function ProjectItem({image, name, id}) {
       navigate("/projects/" + id)
       }} align = "center"
       
-      sx={{height:{xs: "70vw",sm: "60vw", md:"44vw", lg:"18vw", xl:"18vw"}}}
+      sx={{height:{xs: "90vw",sm: "40vw", md:"30vw", lg:"18vw", xl:"18vw"}}}
       >
         <Grid 
           item

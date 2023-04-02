@@ -4,23 +4,12 @@ import Me from './Me'
 import Experience from './Experience';
 import Divider from '@mui/material/Divider';
 import TIKnow from './Skills'
-
-
-
-
+import Contact from './Contact';
 
 export default function Home() {
-  
-  
-
-
-
 
   return (
-
     <div>
-
-      
         <div>
               
         <Me sx={{my: 10}}/>
@@ -31,10 +20,9 @@ export default function Home() {
         <Divider sx={{my: 5}}></Divider>
         <Experience  sx={{m: 10}}></Experience>
         <Divider sx={{my: 5}}></Divider>
+        <Contact  sx={{m: 10}}></Contact>
+        <Divider sx={{my: 5}}></Divider>
       </div>
-
-
-
     </div>
   )
 }

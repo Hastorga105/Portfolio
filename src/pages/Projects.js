@@ -5,25 +5,84 @@ import { ProjectList } from '../helpers/ProjectList'
 import { Container, Typography, Grid } from '@mui/material'
 import Box from '@mui/material/Box';
 
+import { useRef, useState } from "react";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination, Navigation } from "swiper";
+
 export default function Projects() {
   const fx = 12/ProjectList.length;
-  console.log(fx)
+  const elsx = {
+    boxShadow: 0,
+    "&:hover": {
+      boxShadow: "0px 0px 100px 1px #E5446D",
+      cursor: 'pointer'
+    }
+  }
+
   return (
 
-    <Box sx={{ flexGrow: 1 }} align="center" justify = "center" alignItems = "center">
+    <Box sx={{ flexGrow: 1, }} align="center" justify = "center" alignItems = "center">
       
       <Typography variant="h2" sx={{fontWeight: 'bold'}} >MY PROJECTS</Typography>
 
-      <Grid container spacing={3} lg={10} md={12} >
+      <Grid container  lg={10} md={12}>
+      <Swiper
+        slidesPerView={1}
+        spaceBetween={10}
+        pagination={{
+          type: "fraction"
+        }}
+        breakpoints={{
+          0:{
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          600: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+          },
+          900: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          1200: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+          },
+        }}
+        navigation={true}
+        modules={[Pagination, Navigation]}
+        className="mySwiper"
+      >
+      {ProjectList.map((project, idx) => { {/*Loops trhough the ProjectList Like a foreach project}*/}
+                      return (
+                        <Grid item >
+                          <SwiperSlide >
+                            <Grid item sx={{ my:10,  }}>
+                              <ProjectItem  id={idx} name={project.name} image={project.image} sx={elsx}/> 
+                            </Grid>
+                          </SwiperSlide>
+                          
+                        </Grid>
+                      )
+                        
+                    })}
+      </Swiper>
 
-        {ProjectList.map((project, idx) => { {/*Loops trhough the ProjectList Like a foreach project}*/}
+{/*}
+        {ProjectList.map((project, idx) => { {/*Loops trhough the ProjectList Like a foreach project}}
                 return (
                   <Grid item xs={12} md={6} lg={3} sx={{my:3}}>
                      <ProjectItem  id={idx} name={project.name} image={project.image} /> 
                   </Grid>
                 )
                    
-              })}
+              })}*/}
         
       </Grid> 
 

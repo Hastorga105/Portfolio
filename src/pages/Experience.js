@@ -26,7 +26,7 @@ export default function Experience() {
             In my time at <Link href="https://www.milwaukeetool.com/es/Contact" underline="hover">{' Milwaukee'}</Link> I learned a lot about full stack development, and the general workflow inside a company. Overall It was quite a nice experience that allowed me to grow as a person.
           </Typography>
           <Typography variant="h4">
-            You can learn more about my project <Link href="/projects/0" underline="hover">{'here'}</Link>
+            You can learn more about my project <Link href="Portfolio/projects/0" underline="hover">{'here'}</Link>
           </Typography>
         </Grid>  
       </Grid>

@@ -4,9 +4,10 @@ import { Image } from 'mui-image'
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import { ProjectList } from '../helpers/ProjectList';
-import GitHubIcon from '@mui/icons-material/GitHub';
 import Grid from '@mui/material/Grid'
 import blank from '../assets/Blank.png'
+import Divider from '@mui/material/Divider';
+
 
 export default function ProjectDisplay() {
   const { id } = useParams();
@@ -20,7 +21,7 @@ export default function ProjectDisplay() {
 
 
   return (
-    <Grid sx={{my:5}} lg={12}>
+    <Grid continer sx={{my:5}} lg={12} align = "center" >
       <Grid 
       direction="row"
       align="center" 
@@ -45,12 +46,18 @@ export default function ProjectDisplay() {
         </Grid>
         </Grid>
       </Grid>
+      <Grid container xl={10} lg={12} sx={{p:5}}>
+        <Grid>
+          <Typography variant="h3">Overview</Typography>
+        <Typography variant='h5' >{project.overview}</Typography>
+        <Divider sx={{my: 5}}></Divider>
+        <Typography variant="h3">Skills used:</Typography>
+        <Typography variant='h5'>{project.skills}</Typography>
+        </Grid>
         
-        <Typography variant="h3">Overview</Typography>
-        <Typography >{project.overview}</Typography>
+      </Grid>
         
-        <Typography variant='h6'>{project.skills}</Typography>
-        <GitHubIcon/>
+        
     </Grid>
   )
 }

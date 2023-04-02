@@ -4,6 +4,7 @@ import Proj3 from "../assets/Proj3.jpg"
 import Proj41 from "../assets/Project4-1.png"
 import Blank from "../assets/Blank.png"
 import Proj32 from "../assets/RenderDancing.gif"
+import Proj51 from "../assets/Proj51.jpeg"
 
 export const ProjectList = [
     {
@@ -37,9 +38,9 @@ export const ProjectList = [
     },
     {
         name: "Personal Portfolio",
-        image: Proj41,
-        overview: "This is one of the simpler projects, here I learned how to retrieve data from an API and display it on an android app.",
-        skills: "Javascript",
-        link:"https://github.com/Hastorga105/androidAPIexercise"
+        image: Proj51,
+        overview: "This is my personal portfolio where I showcase my programming experience. This project was made in React",
+        skills: "React, Javascript, Material UI",
+        link:"https://github.com/Hastorga105/Portfolio"
     },
 ];
