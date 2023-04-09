@@ -41,6 +41,7 @@ export const ProjectList = [
         image: Proj51,
         overview: "This is my personal portfolio where I showcase my programming experience. This project was made in React",
         skills: "React, Javascript, Material UI",
-        link:"https://github.com/Hastorga105/Portfolio"
+        link:"https://github.com/Hastorga105/Portfolio",
+        dependencies: "swiper, react intersection observer"
     },
 ];

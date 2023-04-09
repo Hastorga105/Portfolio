@@ -22,7 +22,7 @@ export default function Home() {
                     component="img"
                     sx={{
                     width: {sm: "100%", xs: "100%", md:"50%", lg:"40%", xl:"40%" },
-                boxShadow: 23    
+                boxShadow: 23 , borderRadius: '20px'   
                 }}
                     src={Me}
                     />

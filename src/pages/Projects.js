@@ -26,11 +26,11 @@ export default function Projects() {
 
   return (
 
-    <Box sx={{ flexGrow: 1, }} align="center" justify = "center" alignItems = "center">
+    <Box sx={{ flexGrow: 1, borderRadius: '16px' }} align="center" justify = "center" alignItems = "center">
       
       <Typography variant="h2" sx={{fontWeight: 'bold'}} >MY PROJECTS</Typography>
 
-      <Grid container  lg={10} md={12}>
+      <Grid container  lg={10} md={12} sx={{borderRadius: '16px'}}>
       <Swiper
         slidesPerView={1}
         spaceBetween={10}
@@ -62,7 +62,7 @@ export default function Projects() {
       {ProjectList.map((project, idx) => { {/*Loops trhough the ProjectList Like a foreach project}*/}
                       return (
                         <Grid item >
-                          <SwiperSlide >
+                          <SwiperSlide sx={{borderRadius: '16px'}}>
                             <Grid item sx={{ my:10,  }}>
                               <ProjectItem  id={idx} name={project.name} image={project.image} sx={elsx}/> 
                             </Grid>
