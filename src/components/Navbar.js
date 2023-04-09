@@ -35,7 +35,7 @@ function ElevationScroll(props) {
   });
 
   return React.cloneElement(children, {
-    elevation: trigger ? 10 : 0,
+    elevation: trigger ? 20 : 0,
     color: trigger ? "transparent" : "primary"  ,
     //background: trigger ? 'linear-gradient(to right bottom, #430089, #82ffa1)' : "primary"
   });
@@ -79,7 +79,7 @@ export default function Navbar(props) {
 
 <div>
   <ElevationScroll {...props}>
-    <AppBar position="fixed">
+    <AppBar position="fixed" variant='blured'>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />

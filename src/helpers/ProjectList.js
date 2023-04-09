@@ -20,7 +20,7 @@ export const ProjectList = [
         image: Proj2,
         overview: "In this project I developed a mockup online store using the laravel framework to create the backend, this project includes a database, and a user login system.",
         skills: "PHP, Laravel, NodeJS, Tailwind CSS",
-        link:"https://github.com/Hastorga105/Render-Game-Unity"
+        link:"https://github.com/Hastorga105/Laravel-Online-Store"
     },
     {
         name: "Unity Render Game",

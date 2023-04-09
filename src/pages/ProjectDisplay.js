@@ -36,7 +36,7 @@ export default function ProjectDisplay() {
           >
             {project.name}
           </Typography> 
-            <Button variant="outlined" href={project.link} target="_blank" sx={{fontWeight: "bold"}} disableElevation >
+            <Button variant="glow" href={project.link} target="_blank" sx={{fontWeight: "bold"}} disableElevation >
             See it on Github
             </Button>
             

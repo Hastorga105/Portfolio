@@ -45,18 +45,63 @@ const myTheme = createTheme({
     },
   },
   components: {
+    MuiAppBar:{
+      variants: [
+        {
+          props: {variant: 'blured'},
+          style: {
+            backdropFilter: "blur(7px)",
+            background: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0))`
+          }
+        }
+      ]
+    },
     MuiButton: {
       variants: [
         {
+          props: { variant: 'glow contained' },
+          style: {
+            boxShadow: `0px 0px 20px 2px #00CC65`,
+            fontWeight: 'bold',
+            color: "#0f0e25",
+            backgroundColor: "#00CC65",
+            borderRadius: '11px',
+
+            "&:hover": {
+            boxShadow: "0px 0px 35px 2px #00CC65",
+            backgroundColor: "#00CC65",
+          }
+          },
+        },
+        {
           props: { variant: 'glow' },
           style: {
-            boxShadow: `0px 0px 10px 5px #00CC65`,
-            fontWeight: 'bold',
-            fontSize: 20,
-            backgroundColor: "#00CC65",
+            boxShadow: `0px 0px 30px 0px #00CC65`,
+            border: "2px solid rgba(0, 204, 101, 0.5)",
+            borderRadius: '11px',
+            color: "#00CC65",
+            borderRadius: '11px',
+            backdropFilter: "blur(10px)",
+            backgroundColor:'rgba(255,255,255, 0.2)',
             "&:hover": {
-            boxShadow: "0px 0px 30px 15px #00CC65",
-            backgroundColor: "#00CC65",
+            boxShadow: "0px 0px 50px 5px #00CC65",
+            
+          }
+          },
+        },
+        {
+          props: { variant: 'outlined glow' },
+          style: {
+            boxShadow: `0px 0px 0px 0px #00CC65`,
+            border: "2px solid rgba(0, 204, 101, 0.5)",
+            borderRadius: '11px',
+            color: "#00CC65",
+            borderRadius: '11px',
+            backdropFilter: "blur(10px)",
+            backgroundColor:'rgba(255,255,255, 0.2)',
+            "&:hover": {
+            boxShadow: "0px 0px 50px 5px #00CC65",
+            
           }
           },
         },

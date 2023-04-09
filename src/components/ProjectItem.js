@@ -10,8 +10,10 @@ export default function ProjectItem({image, name, id}) {
   const elsx = {
     boxShadow: 0,
     "&:hover": {
-      boxShadow: "0px 0px 100px 1px #00CC65",
-      cursor: 'pointer'
+      boxShadow: "0px 0px 50px 25px #00CC65",
+      border: "3px solid rgba(0, 204, 101, 0.8)",
+      cursor: 'pointer',
+      borderRadius: '16px'
     }
   }
 
@@ -27,7 +29,7 @@ export default function ProjectItem({image, name, id}) {
       navigate("/projects/" + id)
       }} align = "center"
       
-      sx={{height:{xs: "90vw",sm: "40vw", md:"30vw", lg:"18vw", xl:"18vw"}, borderRadius: '16px' }}
+      sx={{height:{xs: "90vw",sm: "40vw", md:"30vw", lg:"18vw", xl:"18vw"}, borderRadius: '16px', }}
       >
         <Grid 
           item

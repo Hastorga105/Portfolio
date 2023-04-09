@@ -64,7 +64,7 @@ export default function Contact () {
               <TextField fullWidth label="Your name"  sx={{ py:2}} type="text" value={name}  required  onChange={e => setName(e.target.value)}/>
               <TextField fullWidth label="Your email"  sx={{ py:2}}  type="email" value={email} required onChange={e => setEmail(e.target.value)}/>
               <TextField multiline={true} rows={10}  sx={{ py:2}} fullWidth label="Message" margin="normal" required type="text" value={message} onChange={e => setMessage(e.target.value)}/>
-              <Button variant="glow" fullWidth endIcon={<SendIcon />} type="submit" size="large">SEND
+              <Button variant="glow contained" fullWidth endIcon={<SendIcon />} type="submit" size="large">SEND
               </Button>
             </form>
             </CardGlow>
