@@ -50,7 +50,7 @@ export default function Contact () {
               <TextField fullWidth label="Your email" disabled sx={{ py:2}} type="text" name="from_name"  />
               <TextField fullWidth label="Your name" disabled sx={{ py:2}}  type="text" name="from_email"  />
               <TextField multiline={true} rows={10}  disabled fullWidth label="Message" margin="normal"  type="text" name="message" />
-              <Button variant="contained" endIcon={<SendIcon />} type="submit" value="Send">
+              <Button variant="contained" disabled endIcon={<SendIcon />} type="submit" value="Send">
                   Send
               </Button>
             </form>
