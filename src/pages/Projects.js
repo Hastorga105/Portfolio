@@ -15,14 +15,6 @@ import "swiper/css/pagination";
 import { Pagination, Navigation } from "swiper";
 
 export default function Projects() {
-  const fx = 12/ProjectList.length;
-  const elsx = {
-    boxShadow: 0,
-    "&:hover": {
-      boxShadow: "0px 0px 100px 1px #E5446D",
-      cursor: 'pointer'
-    }
-  }
 
   return (
 
@@ -64,7 +56,7 @@ export default function Projects() {
                         <Grid item >
                           <SwiperSlide sx={{borderRadius: '16px'}}>
                             <Grid item sx={{ my:10,  }}>
-                              <ProjectItem  id={idx} name={project.name} image={project.image} sx={elsx}/> 
+                              <ProjectItem  id={idx} name={project.name} image={project.image} /> 
                             </Grid>
                           </SwiperSlide>
                           

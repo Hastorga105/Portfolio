@@ -14,3 +14,7 @@
     filter: blur(0);
     transform: translateX(0);
 }
+
+.elevated {
+  box-shadow: "0px 0px 100px 100px #E5446D" !important;
+}

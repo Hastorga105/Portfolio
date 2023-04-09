@@ -6,27 +6,19 @@ import Experience from './pages/Experience';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ProjectDisplay from './pages/ProjectDisplay';
-import Me from './pages/Me';
-import Container from '@mui/material/Container';
 import  Box  from '@mui/material/Box';
-import bg from './assets/bg.avif'
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import "./styles/styles.css"
-import { DarkMode } from '@mui/icons-material';
-
 import { useEffect, useState } from 'react';
 
-import { Card } from "@mui/material";
 
 import Button from '@mui/material/Button';
-import { styled } from '@mui/material/styles';
 import Dialog from '@mui/material/Dialog';
 import DialogTitle from '@mui/material/DialogTitle';
 import DialogContent from '@mui/material/DialogContent';
 import DialogActions from '@mui/material/DialogActions';
-import IconButton from '@mui/material/IconButton';
-import CloseIcon from '@mui/icons-material/Close';
+
 import Typography from '@mui/material/Typography';
 
 const myTheme = createTheme({
@@ -51,7 +43,26 @@ const myTheme = createTheme({
         fontSize: '1.5rem',
       },
     },
-  }
+  },
+  components: {
+    MuiButton: {
+      variants: [
+        {
+          props: { variant: 'glow' },
+          style: {
+            boxShadow: `0px 0px 10px 5px #00CC65`,
+            fontWeight: 'bold',
+            fontSize: 20,
+            backgroundColor: "#00CC65",
+            "&:hover": {
+            boxShadow: "0px 0px 30px 15px #00CC65",
+            backgroundColor: "#00CC65",
+          }
+          },
+        },
+      ],
+    },
+  },
 });
 
 function App() {

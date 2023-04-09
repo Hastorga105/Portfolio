@@ -8,7 +8,6 @@ import Contact from './Contact';
 import { useRef, useEffect, useState } from 'react'
 import { useInView} from 'react-intersection-observer'
 
-import styles from '../styles/styles.css'
 
 export default function Home() {
 
@@ -24,7 +23,7 @@ export default function Home() {
         <Divider sx={{my: 5}}></Divider>
         <TIKnow  sx={{m: 10}}></TIKnow>
         <Divider sx={{my: 5}} ></Divider>
-        <h2 ref={projectRef} className={`${styles.hidden} ${projectIsVisible ? styles.show : ''}`}>Hola mundo</h2>
+        {/*<h2 ref={projectRef} className={`${styles.hidden} ${projectIsVisible ? styles.show : ''}`}>Hola mundo</h2>*/}
         <Experience  sx={{m: 10}}></Experience>
         <Divider sx={{my: 5}}></Divider>
         <Contact  sx={{m: 10}}></Contact>

@@ -10,7 +10,7 @@ export default function ProjectItem({image, name, id}) {
   const elsx = {
     boxShadow: 0,
     "&:hover": {
-      boxShadow: "0px 0px 100px 1px #E5446D",
+      boxShadow: "0px 0px 100px 1px #00CC65",
       cursor: 'pointer'
     }
   }

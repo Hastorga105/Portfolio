@@ -1,6 +1,6 @@
-import React, { useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import { Box, Typography, Grid } from '@mui/material'
+import { Box, Typography, Grid, Card } from '@mui/material'
 
 
 import IconButton from '@mui/material/IconButton';
@@ -17,20 +17,33 @@ import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
 
 
+import { alpha, styled } from '@mui/material/styles';
+import ButtonGlow from '../components/ButtonGlow';
+
 export default function Contact () {
 
-  const defaultValues = {
-    name: "name",
-    email: "email",
-    message: "message"
-  }
+  const CardGlow = styled(Card)(({ theme }) => ({
+    boxShadow: `0px 0px 80px 20px #00CC65`,
+  }));
 
-  const form = useRef();
+  const [ name, setName ] = useState("")
+  const [ email, setEmail ] = useState("")
+  const [ message, setMessage ] = useState("")
+  const [ error, setError ] = useState(false)
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_fqrhbii', 'template_os2lm1e', form.current, 'uyp-tzctUss3EBPUp')
+    if (name == '' || email == '' || message == ''){
+      setError(true)
+    }
+
+    emailjs.send('service_fqrhbii', 'template_os2lm1e', {
+      from_name: name,
+      from_email: email,
+      message: message,
+    }, 'uyp-tzctUss3EBPUp'
+    )
       .then((result) => {
           console.log(result.text);
       }, (error) => {
@@ -41,33 +54,21 @@ export default function Contact () {
   return (
     <>
     
-    <Box sx={{ flexGrow: 1, p:{xs:3, xl:10, lg:3} }} align="center" justify = "center" alignItems = "center">
-      <Typography variant="h2" sx={{fontWeight: 'bold'}} > (WORK IN PROGRESS) CONTACT ME (WORK IN PROGRESS)</Typography> 
-        <Typography variant="h4">(WORK IN PROGRESS) Send me an email! (WORK IN PROGRESS)</Typography>
+    <Box sx={{ flexGrow: 1, p:{xs:3, xl:0, lg:3} }} align="center" justify = "center" alignItems = "center">
+      <Typography variant="h2" sx={{fontWeight: 'bold'}} >CONTACT ME</Typography> 
+        <Typography variant="h4">Send me an email!</Typography>
         <Grid container sx={{ py:10}} xl={10}>
           <Grid container item  xl={6} md={6} sm={12} >
-            <form ref={form} onSubmit={sendEmail}>
-              <TextField fullWidth label="Your email" disabled sx={{ py:2}} type="text" name="from_name"  />
-              <TextField fullWidth label="Your name" disabled sx={{ py:2}}  type="text" name="from_email"  />
-              <TextField multiline={true} rows={10}  disabled fullWidth label="Message" margin="normal"  type="text" name="message" />
-              <Button variant="contained" disabled endIcon={<SendIcon />} type="submit" value="Send">
-                  Send
+            <CardGlow sx={{p:5, borderRadius: 5 }} >
+              <form onSubmit={sendEmail} >
+              <TextField fullWidth label="Your name"  sx={{ py:2}} type="text" value={name}  required  onChange={e => setName(e.target.value)}/>
+              <TextField fullWidth label="Your email"  sx={{ py:2}}  type="email" value={email} required onChange={e => setEmail(e.target.value)}/>
+              <TextField multiline={true} rows={10}  sx={{ py:2}} fullWidth label="Message" margin="normal" required type="text" value={message} onChange={e => setMessage(e.target.value)}/>
+              <Button variant="glow" fullWidth endIcon={<SendIcon />} type="submit" size="large">SEND
               </Button>
             </form>
-            
+            </CardGlow>
           </Grid> 
-{/*}
-          <Grid item xl={6}>
-            <form ref={form} onSubmit={sendEmail}>
-              <label>Name</label>
-              <input type="text" name="from_name" />
-              <label>Email</label>
-              <input type="email" name="from_email" />
-              <label>Message</label>
-              <textarea name="message" />
-              <input type="submit" value="Send" />
-            </form>
-          </Grid>*/}
   </Grid>
         
     </Box>
