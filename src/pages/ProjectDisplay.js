@@ -61,11 +61,11 @@ export default function ProjectDisplay() {
           {data.map((datax, idx) => {{
             return (
               <>
-              <Divider></Divider>
+              <Divider variant='big green'></Divider>
               <Grid 
               direction="row"
               align="center" 
-              sx={{py:5, my:5}}
+              sx={{py:5}}
               style={{ backgroundImage:`linear-gradient(to bottom,  rgba(16, 14, 37, 0.0), rgba(16, 14, 37, 1)), url(${datax.img})`,  backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundPosition:"center top"}}    
               >
                 <Grid container align="left" sx={{px:3}}>

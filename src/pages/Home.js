@@ -16,10 +16,9 @@ export default function Home() {
   return (
     <div>
         <div>
-              
         <Me sx={{my: 10}}/>
-        <Divider sx={{my: 5}}  ></Divider>
-        <Projects  sx={{my: 10}} ></Projects>
+        <Divider sx={{my: 5}}></Divider>
+        <Projects  sx={{my: 10}}></Projects>
         <Divider sx={{my: 5}}></Divider>
         <TIKnow  sx={{m: 10}}></TIKnow>
         <Divider sx={{my: 5}} ></Divider>

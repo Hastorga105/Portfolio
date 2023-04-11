@@ -26,21 +26,14 @@ import { alpha, styled } from '@mui/material/styles';
 
 export default function Contact () {
 
-  //alert
-  const [open, setOpen] = React.useState(false);
-  const [ mes, setMes ] = React.useState("")
-
-  //card glow
-  const CardGlow = styled(Card)(({ theme }) => ({
-    boxShadow: `0px 0px 80px 20px #00CC65`,
-  }));
-
   //email
+  const form = useRef();
 
-  const [ name, setName ] = useState("")
+  const name = ""
   const [ email, setEmail ] = useState("")
   const [ message, setMessage ] = useState("")
   const [ error, setError ] = useState(false)
+  const [ mes, setMes] = useState("Message")
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -49,24 +42,30 @@ export default function Contact () {
       setError(true)
     }
 
-    emailjs.send('service_fqrhbii', 'template_os2lm1e', {
-      from_name: name,
-      from_email: email,
-      message: message,
-    }, 'uyp-tzctUss3EBPUp'
+    emailjs.sendForm('service_fqrhbii', 'template_os2lm1e', form.current, 'uyp-tzctUss3EBPUp'
     )
       .then((result) => {
           setOpen(true);
           setMes("Message sent!")
-          setEmail("")
-          setName("")
-          setMessage("")
+          //setEmail("")
+          //setName("")
+          //setMessage("")
           console.log(result.text);
+          document.getElementById("send").reset();
       }, (error) => {
           console.log(error.text);
           setMes("Message couldn't be sent :(")
       });
   };
+  
+  //alert
+  const [open, setOpen] = React.useState(false);
+  //const [ mes, setMes ] = React.useState("")
+
+  //card glow
+  const CardGlow = styled(Card)(({ theme }) => ({
+    boxShadow: `0px 0px 80px 20px #00CC65`,
+  }));
 
   return (
     <>
@@ -77,10 +76,10 @@ export default function Contact () {
         <Grid container sx={{ py:10}} xl={10}>
           <Grid container item  xl={6} md={6} sm={12} >
             <CardGlow sx={{p:5, borderRadius: 5 }} >
-              <form onSubmit={sendEmail} >
-                <TextField fullWidth label="Your name"  sx={{ py:2}} type="text" value={name}  required  onChange={e => setName(e.target.value)}/>
-                <TextField fullWidth label="Your email"  sx={{ py:2}}  type="email" value={email} required onChange={e => setEmail(e.target.value)}/>
-                <TextField multiline={true} rows={10}  sx={{ py:2}} fullWidth label="Message" margin="normal" required type="text" value={message} onChange={e => setMessage(e.target.value)}/>
+              <form ref={form} onSubmit={sendEmail} id='send'>
+                <TextField fullWidth label="Your name"  sx={{ py:2}} required  name="from_name"/>
+                <TextField fullWidth label="Your email"  sx={{ py:2}} type='email' required name="from_email"/>
+                <TextField multiline={true} rows={10}  sx={{ py:2}} fullWidth label="Message" margin="normal" required  name="message"/>
                 <Button variant="glow contained" fullWidth endIcon={<SendIcon />} type="submit" size="large" >SEND
                 </Button>
               </form>
@@ -103,9 +102,12 @@ export default function Contact () {
                 }
                 sx={{ mb: 2 }}
               >
-                {mes}
+                <Typography variant='glow' sx={{fontWeight: "bold"}}>
+                  {mes}
+                </Typography>
+                
               </Alert>
-            </Collapse>
+              </Collapse>
           </Grid> 
         </Grid>
         

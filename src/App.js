@@ -21,6 +21,7 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogActions from '@mui/material/DialogActions';
 
 import Typography from '@mui/material/Typography';
+import ScrollToTop from './components/ScrollToTop';
 
 const myTheme = createTheme({
   palette: {
@@ -67,6 +68,14 @@ const myTheme = createTheme({
             borderColor: "#00CC65",
             marginRight: '15%'
           }
+        },
+        {
+          props: {variant: 'big green'},
+          style: {
+            borderBottomWidth: 15,
+            borderColor: "#00CC65",
+            boxShadow: `0px 0px 30px 0px #00CC65`,
+          }
         }
       ]
     },
@@ -75,7 +84,7 @@ const myTheme = createTheme({
         {
           props: { variant: 'glow' },
           style: {
-            color: "white",
+            color: "#00CC65",
             textShadow: `0px 0px 50px #00CC65`,
           }
         }
@@ -203,6 +212,7 @@ function App() {
       <CssBaseline />
       <Box className="App" sx ={{ pt: 5, px:-2 }}>
     <Router  basename={process.env.PUBLIC_URL}>
+      <ScrollToTop></ScrollToTop>
       <Navbar/>
         <Routes>
         <Route path="/" element={<Home/>}></Route>

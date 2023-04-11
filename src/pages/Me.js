@@ -5,12 +5,13 @@ import { Typography, Divider } from '@mui/material';
 import Button from '@mui/material/Button';
 import Me from '../assets/me.jpg';
 import CV from '../assets/documents/CV.pdf'
+import Banner from '../assets/Banner.png'
 
 export default function Home() {
     const espacio = " "
   return (
 
-    <Grid style={{ backgroundImage:`url(${"https://i.pinimg.com/originals/c9/84/d6/c984d66728f6dadd828777975e48b3fd.gif"})`, height: '100%',  backgroundRepeat:"no-repeat", backgroundSize:"cover", }}>
+    <Grid style={{ backgroundImage:`linear-gradient(to bottom,  rgba(16, 14, 37, 0.0), rgba(16, 14, 37, 1)), url(${Banner})`, height: '100%',  backgroundRepeat:"no-repeat", backgroundSize:"cover", }}>
         <Grid container sx={{ p:3 }}>{/*Row*/ }
             <Grid item xl={6} lg={6} md={6} sm={12} xs={12} sx={{ py:{lg:10, md:5, sm:3, xs:1},  }} align="left" order={{md: 1, sm: 2, xs:2}}>{/**Column 2 */}
                 <Typography sx={{pr: 2, fontWeight: "bold", fontSize: {lg: 60, md:50, sm:40, xs:40}}} style={{display: 'inline-block'}} >MY NAME IS </Typography>

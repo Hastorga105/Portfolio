@@ -25,7 +25,7 @@ export const ProjectList = [
             },
             {
                 title:"Heijunka page",
-                desc: "Here you see an hourly report on production lots, every time a lot is finished the information gets updated and it is displayed until the shift ends. Because we didn't get to impleent a way to retrieve the data from the production lines, the production is simulated by the click of a button. This information is uploaded to a database.",
+                desc: "Here you see a report on production lots, every time a lot is finished the information gets updated and it is displayed until the shift ends. Because we didn't get to impleent a way to retrieve the data from the production lines, the production is simulated by the click of a button. This information is uploaded to a database.",
                 img: Proj12,
             },
             {
