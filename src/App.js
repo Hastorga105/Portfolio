@@ -11,6 +11,7 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import "./styles/styles.css"
 import { useEffect, useState } from 'react';
+import ReactDOM from "react-dom";
 
 
 import Button from '@mui/material/Button';
@@ -45,6 +46,41 @@ const myTheme = createTheme({
     },
   },
   components: {
+    MuiCard:{
+      variants: [
+        {
+          props: {variant: 'glow squared'},
+          style:{
+            boxShadow: `0px 0px 15px 0px #00CC65`,
+            borderRadius: '0px',
+          }
+        }
+      ]
+    }
+    ,
+    MuiDivider:{
+      variants: [
+        {
+          props: {variant: 'cool'},
+          style: {
+            borderBottomWidth: 5,
+            borderColor: "#00CC65",
+            marginRight: '15%'
+          }
+        }
+      ]
+    },
+    MuiTypography:{
+      variants: [
+        {
+          props: { variant: 'glow' },
+          style: {
+            color: "white",
+            textShadow: `0px 0px 50px #00CC65`,
+          }
+        }
+      ]
+    },
     MuiAppBar:{
       variants: [
         {
@@ -69,7 +105,7 @@ const myTheme = createTheme({
 
             "&:hover": {
             boxShadow: "0px 0px 35px 2px #00CC65",
-            backgroundColor: "#00CC65",
+            backgroundColor: "#00ff7b",
           }
           },
         },
@@ -141,7 +177,7 @@ function App() {
           >
             
             <DialogTitle onClose={closePopUp}>
-            Modal title
+            Hi! Welcome to my portfolio
             </DialogTitle>
             <DialogContent dividers>
               <Typography >

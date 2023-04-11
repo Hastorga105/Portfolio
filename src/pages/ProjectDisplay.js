@@ -12,6 +12,8 @@ import Divider from '@mui/material/Divider';
 export default function ProjectDisplay() {
   const { id } = useParams();
   const project = ProjectList[id];
+  const data = project.info;
+  console.log("data es " + data[0].title)
   const glow = {
     boxShadow: 0,
     "&:hover": {
@@ -25,7 +27,7 @@ export default function ProjectDisplay() {
       <Grid 
       direction="row"
       align="center" 
-      style={{ backgroundImage:`linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)), url(${project.image})`,  backgroundRepeat:"no-repeat", backgroundSize:"cover",  textTransform: "uppercase"}}    
+      style={{ backgroundImage:`linear-gradient(to bottom, rgba(0, 0, 0, 0),  rgba(0, 20, 40, 0.8)), url(${project.image})`,  backgroundRepeat:"no-repeat", backgroundSize:"cover",  textTransform: "uppercase"}}    
       height={"50%"}
       >
         <Grid container>
@@ -46,16 +48,51 @@ export default function ProjectDisplay() {
         </Grid>
         </Grid>
       </Grid>
-      <Grid container xl={10} lg={12} sx={{p:5}}>
+      <Grid container xl={6} lg={12} sx={{p:5}}>
         <Grid>
-          <Typography variant="h3">Overview</Typography>
-        <Typography variant='h5' >{project.overview}</Typography>
+          <Typography sx={{fontWeight: "bold", fontSize: {md:100,  xs:50},  textTransform: "uppercase" }}>Overview</Typography>
+          <Divider sx={{mb: 5}}></Divider>
+        <Typography sx={{fontSize: {md:30, sm: 20, xs:15}}} >{project.overview}</Typography>
         <Divider sx={{my: 5}}></Divider>
         <Typography variant="h3">Skills used:</Typography>
         <Typography variant='h5'>{project.skills}</Typography>
         </Grid>
-        
       </Grid>
+          {data.map((datax, idx) => {{
+            return (
+              <>
+              <Divider></Divider>
+              <Grid 
+              direction="row"
+              align="center" 
+              sx={{py:5, my:5}}
+              style={{ backgroundImage:`linear-gradient(to bottom,  rgba(16, 14, 37, 0.0), rgba(16, 14, 37, 1)), url(${datax.img})`,  backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundPosition:"center top"}}    
+              >
+                <Grid container align="left" sx={{px:3}}>
+                  <Grid  lg={6} direction="column">
+                    <Box sx={{height: 500}}/>
+                    <Typography variant="h1" sx={{ textTransform: "uppercase", typography: { sm:"h2", xs:"h2", md:"h1"}, fontWeight: { xs: 'bold', sm:"bold", md:"bold", lg:"bold", xl:"bold"}}}
+                    color="common.white" 
+                    >
+                    {datax.title}
+                    </Typography> 
+                    <Typography>{datax.desc}
+                    </Typography>
+                    <Box sx={{height: 200}}/>
+                  </Grid>
+                  <Grid lg={6} direction="column">
+                  </Grid>
+                 </Grid>
+                </Grid>
+              </>
+             
+            )
+          }}
+          )}
+         
+          
+          
+      
         
         
     </Grid>

@@ -31,8 +31,8 @@ export default function Projects() {
         }}
         breakpoints={{
           0:{
-            slidesPerView: 1,
-            spaceBetween: 10,
+            slidesPerView: 2,
+            spaceBetween: 1,
           },
           600: {
             slidesPerView: 2,
@@ -56,7 +56,7 @@ export default function Projects() {
                         <Grid item >
                           <SwiperSlide sx={{borderRadius: '16px'}}>
                             <Grid item sx={{ my:10,  }}>
-                              <ProjectItem  id={idx} name={project.name} image={project.image} /> 
+                              <ProjectItem  id={idx} name={project.name} image={project.image} skills={project.skills}/> 
                             </Grid>
                           </SwiperSlide>
                           

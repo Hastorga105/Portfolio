@@ -27,7 +27,7 @@ export default function Home() {
         <Experience  sx={{m: 10}}></Experience>
         <Divider sx={{my: 5}}></Divider>
         <Contact  sx={{m: 10}}></Contact>
-        <Divider sx={{my: 5}}></Divider>
+        
       </div>
     </div>
   )
