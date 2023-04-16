@@ -9,7 +9,7 @@ import Proj3 from "../assets/Proj3.jpg"
 import Proj41 from "../assets/Project4-1.png"
 import Blank from "../assets/Blank.png"
 import Proj32 from "../assets/RenderDancing.gif"
-import Proj51 from "../assets/Proj51.jpeg"
+import Proj51 from "../assets/Proj51.png"
 
 export const ProjectList = [
     {
@@ -93,7 +93,7 @@ export const ProjectList = [
     {
         name: "Personal Portfolio",
         image: Proj51,
-        overview: "This is my personal portfolio where I showcase my programming experience. This project was made in React",
+        overview: "This is my personal portfolio where I showcase my programming experience. This project was made in React, it uses React hooks (useState, useRef, useEffect...). It's my first time using the Material UI framework, I'm still getting used to it.",
         info: [
             {
                 
