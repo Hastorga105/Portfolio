@@ -27,7 +27,7 @@ export default function ProjectDisplay() {
       <Grid 
       direction="row"
       align="center" 
-      style={{ backgroundImage:`linear-gradient(to bottom, rgba(0, 0, 0, 0),  rgba(0, 20, 40, 0.8)), url(${project.image})`,  backgroundRepeat:"no-repeat", backgroundSize:"cover",  textTransform: "uppercase"}}    
+      style={{ backgroundImage:`linear-gradient(to bottom, rgba(0, 0, 0, 0.2),  rgba(0, 20, 40, 0.9)), url(${project.image})`,  backgroundRepeat:"no-repeat", backgroundSize:"cover",  textTransform: "uppercase"}}    
       height={"50%"}
       >
         <Grid container>
@@ -38,9 +38,18 @@ export default function ProjectDisplay() {
           >
             {project.name}
           </Typography> 
-            <Button variant="glow" href={project.link} target="_blank" sx={{fontWeight: "bold"}} disableElevation >
+            <Button variant="glow" href={project.git} target="_blank" sx={{fontWeight: "bold"}} disableElevation >
             See it on Github
             </Button>
+            {
+              project.link === "" ? (
+                <></>
+              ) : (
+                <Button variant="glow contained" href={project.link} target="_blank" sx={{fontWeight: "bold", mx: 3}} disableElevation >
+                Live Demonstration
+                </Button>
+              )
+            }
             
           <Image src={blank} height={"25%"}/>
         </Grid>
@@ -66,7 +75,7 @@ export default function ProjectDisplay() {
               direction="row"
               align="center" 
               sx={{py:5}}
-              style={{ backgroundImage:`linear-gradient(to bottom,  rgba(16, 14, 37, 0.0), rgba(16, 14, 37, 1)), url(${datax.img})`,  backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundPosition:"center top"}}    
+              style={{ backgroundImage:`linear-gradient(to bottom,  rgba(16, 14, 37, 0.1), rgba(16, 14, 37, 1)), url(${datax.img})`,  backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundPosition:"center top"}}    
               >
                 <Grid container align="left" sx={{px:3}}>
                   <Grid  lg={6} direction="column">

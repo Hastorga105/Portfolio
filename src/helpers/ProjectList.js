@@ -10,6 +10,7 @@ import Proj41 from "../assets/Project4-1.png"
 import Blank from "../assets/Blank.png"
 import Proj32 from "../assets/RenderDancing.gif"
 import Proj51 from "../assets/Proj51.png"
+import Proj61 from "../assets/Proj61.PNG.png"
 
 export const ProjectList = [
     {
@@ -17,6 +18,7 @@ export const ProjectList = [
         image: Proj1,
         image2: Blank,
         overview: "In this project I had to create a web application to show production data from the company, I made a dashboard page to show the main data, a Heijunka page where I showed the current lots being made and a report page that showed how much had been produced per hour",
+        link: "",
         info: [
             {
                 title:"Dashboard page",
@@ -36,12 +38,29 @@ export const ProjectList = [
             ], 
          
         skills: "Javascript, VueJS, Vuetify, Express, NodeJS, SQL Server",
-        link: "https://github.com/Hastorga105/VueJS-Production-Dashboard"
+        git: "https://github.com/Hastorga105/VueJS-Production-Dashboard"
+    },
+    {
+        name: "React Youtube Clone (Work In Progress)",
+        image: Proj61,
+        overview: "This is a web application that uses information from the official Youtube website to create a simplified version of the website. It uses RapidAPI to extract data from Youtube and then convert it into an API. This project was made following a Javascript Mastery's tutorial.",
+        link: "https://hastorga105.github.io/react-youtube-clone/",
+        info: [
+            {
+                title:"",
+                desc: "",
+                img: null,
+            },
+            ], 
+         
+        skills: "ReactJS, Javascript, Axios, API, Material UI",
+        git: "https://github.com/Hastorga105/react-youtube-clone"
     },
     {
         name: "Unity Render Game",
         image: Proj32,
         overview: "As a way of learning the basics of the Unity game engine, I developed a game based on my university and its mascot Rendo. In this project I used basic concepts of C# and knowledge from one of my passions 3D modeling.",
+        link: "",
         info: [
             {
                 title:"Welcome to the UTLD",
@@ -63,44 +82,47 @@ export const ProjectList = [
             },
             ], 
         skills: "C#, Unity, Blender",
-        link:"https://github.com/Hastorga105/Render-Game-Unity"
+        git:"https://github.com/Hastorga105/Render-Game-Unity"
     },
     {
         name: "Laravel online store",
         image: Proj2,
         overview: "In this project I developed a mockup online store using the laravel framework to create the backend, this project includes a database, and a user login system.",
+        link: "",
         info: [
             {
                 
             },
             ], 
         skills: "PHP, Laravel, NodeJS, Tailwind CSS",
-        link:"https://github.com/Hastorga105/Laravel-Online-Store"
+        git:"https://github.com/Hastorga105/Laravel-Online-Store"
     },
     
     {
         name: "Android studio API REST APP",
         image: Proj41,
         overview: "This is one of the simpler projects, here I learned how to retrieve data from an API and display it on an android app.",
+        link: "",
         info: [
             {
                 
             },
             ], 
         skills: "Android Studio, Kotlin, Jetpack Compose",
-        link:"https://github.com/Hastorga105/androidAPIexercise"
+        git:"https://github.com/Hastorga105/androidAPIexercise"
     },
     {
         name: "Personal Portfolio",
         image: Proj51,
         overview: "This is my personal portfolio where I showcase my programming experience. This project was made in React, it uses React hooks (useState, useRef, useEffect...). It's my first time using the Material UI framework, I'm still getting used to it.",
+        link: "",
         info: [
             {
                 
             },
             ], 
         skills: "React, Javascript, Material UI",
-        link:"https://github.com/Hastorga105/Portfolio",
+        git:"https://github.com/Hastorga105/Portfolio",
         dependencies: "swiper, react intersection observer"
     },
 ];
