@@ -60,7 +60,7 @@ export const ProjectList = [
         name: "Unity Render Game",
         image: Proj32,
         overview: "As a way of learning the basics of the Unity game engine, I developed a game based on my university and its mascot Rendo. In this project I used basic concepts of C# and knowledge from one of my passions 3D modeling.",
-        link: "",
+        link: "https://hastorga.itch.io/render-game",
         info: [
             {
                 title:"Welcome to the UTLD",
