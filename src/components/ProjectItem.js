@@ -8,13 +8,14 @@ import React from 'react';
 export default function ProjectItem({image, name, id, skills}) {
   const navigate = useNavigate();
   const elsx = {
+    transition: '0.2s ease-in-out' ,
     boxShadow: 0,
     borderRadius: '16px',
     "&:hover": {
       boxShadow: "0px 0px 50px 25px #00CC65",
 //border: "3px solid rgba(0, 204, 101, 0.8)",
       cursor: 'pointer',
-      
+      transform: 'translateY(-30px)',
     }
   }
 

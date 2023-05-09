@@ -36,3 +36,34 @@
     transform: rotate(360deg);
   }
 }
+
+.shadowGlow{
+  transition: 0.2s ease-in-out;
+
+}
+.shadowGlow:hover{
+  box-shadow: 0px 0px 50px 25px #00CC65;
+}
+.transformY{
+  transition: 0.2s cubic-bezier(1,.01,0,1);
+
+}
+.transformY:hover{
+  transform: translateY(-30px);
+
+}
+.icon{
+  fill:#fff;
+  transition: 0.2s ease-in-out;
+
+}
+.icon:hover{
+  fill:#00ff80;
+  filter: drop-shadow(0px 0px 30px #00CC65);
+}
+.transparent{
+  background: rgba(0, 0, 0, 0);
+}
+.text:hover{
+  color: #00ff80;
+}

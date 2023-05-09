@@ -22,12 +22,12 @@ export const ProjectList = [
         info: [
             {
                 title:"Dashboard page",
-                desc: "In this page I display the most importan infomration of the production, how many products have been made, how close it is to the production objective and how fast are they making the product",
+                desc: "In this page I display the most important information of the production, how many products have been made, how close it is to the production objective and how fast are they making the product",
                 img: Proj1,
             },
             {
                 title:"Heijunka page",
-                desc: "Here you see a report on production lots, every time a lot is finished the information gets updated and it is displayed until the shift ends. Because we didn't get to impleent a way to retrieve the data from the production lines, the production is simulated by the click of a button. This information is uploaded to a database.",
+                desc: "Here you see a report on production lots, every time a lot is finished the information gets updated and it is displayed until the shift ends. Because we didn't get to implement a way to retrieve the data from the production lines, the production is simulated by the click of a button. This information is uploaded to a database.",
                 img: Proj12,
             },
             {

@@ -6,6 +6,7 @@ import Button from '@mui/material/Button';
 import Me from '../assets/me.jpg';
 import CV from '../assets/documents/CV.pdf'
 import Banner from '../assets/Banner.png'
+import Laptop from '../assets/laptop.svg'
 
 export default function Home() {
     const espacio = " "
@@ -25,6 +26,7 @@ export default function Home() {
                 <Button variant="glow contained"  sx={{mt:3, mr:1}} href = {CV} target = "_blank">Download CV</Button>
             </Grid>
             <Grid item xl={4} lg={4} md={6} sm={12} xs={12} sx={{ py:{lg:10, md:5, sm:3, xs:1} }} order={{md: 2, sm: 1, xs:1}}>{/**Column 2 */}
+                
                 {/*<Box
                     component="img"
                     sx={{
