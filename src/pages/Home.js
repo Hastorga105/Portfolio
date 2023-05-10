@@ -11,8 +11,7 @@ import { useInView} from 'react-intersection-observer'
 
 export default function Home() {
 
-  const { ref: projectRef, inView: projectIsVisible } = useInView();
-
+ 
   return (
     <div>
         <div>
@@ -22,7 +21,7 @@ export default function Home() {
         <Divider sx={{my: 5}}></Divider>
         <TIKnow  sx={{m: 10}}></TIKnow>
         <Divider sx={{my: 5}} ></Divider>
-        {/*<h2 ref={projectRef} className={`${styles.hidden} ${projectIsVisible ? styles.show : ''}`}>Hola mundo</h2>*/}
+        
         <Experience  sx={{m: 10}}></Experience>
         <Divider sx={{my: 5}}></Divider>
         <Contact  sx={{m: 10}}></Contact>
