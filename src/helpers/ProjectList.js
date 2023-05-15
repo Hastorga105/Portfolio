@@ -11,6 +11,11 @@ import Blank from "../assets/Blank.png"
 import Proj32 from "../assets/RenderDancing.gif"
 import Proj51 from "../assets/Proj51.png"
 import Proj61 from "../assets/Proj61.PNG.png"
+import Proj62 from "../assets/Proj62.png"
+import Proj63 from "../assets/Proj63.png"
+import Proj64 from "../assets/Proj64.png"
+import Proj21 from "../assets/Proj21.jpeg"
+import Proj233 from "../assets/Project23.jpeg"
 
 export const ProjectList = [
     {
@@ -47,10 +52,21 @@ export const ProjectList = [
         link: "https://hastorga105.github.io/react-youtube-clone/",
         info: [
             {
-                title:"",
-                desc: "",
-                img: null,
+                title:"Api Calls",
+                desc: "This app can retrieve data from an API to display it on the website. I used Rapid API's Youtube V3 App to search for the data.",
+                img: Proj62,
             },
+            {
+                title:"Search feature",
+                desc: "You can search for specific words on the api and see the results.",
+                img: Proj64,
+            },
+            {
+                title:"Pagination",
+                desc: "Reuses code to create individual pages for every element from the API",
+                img: Proj63,
+            },
+
             ], 
          
         skills: "ReactJS, Javascript, Axios, API, Material UI",
@@ -91,6 +107,21 @@ export const ProjectList = [
         link: "",
         info: [
             {
+                title:"MYSQL DATABASE",
+                desc: "All of the info you see is stored in a MySQL database, the connection is made through Laravel and PHP.",
+                img: Proj233
+                
+            },
+            {
+                title:"Home Page",
+                desc: "Here you can see all the products from the database displayed by category of the products",
+                img: Proj233
+                
+            },
+            {
+                title:"User Login and Registration",
+                desc: "You can login or register as a user with laravel account system",
+                img: Proj21
                 
             },
             ], 
@@ -111,7 +142,7 @@ export const ProjectList = [
         skills: "Android Studio, Kotlin, Jetpack Compose",
         git:"https://github.com/Hastorga105/androidAPIexercise"
     },
-    {
+    /*{
         name: "Personal Portfolio",
         image: Proj51,
         overview: "This is my personal portfolio where I showcase my programming experience. This project was made in React, it uses React hooks (useState, useRef, useEffect...). It's my first time using the Material UI framework, I'm still getting used to it.",
@@ -124,5 +155,5 @@ export const ProjectList = [
         skills: "React, Javascript, Material UI",
         git:"https://github.com/Hastorga105/Portfolio",
         dependencies: "swiper, react intersection observer"
-    },
+    },*/
 ];

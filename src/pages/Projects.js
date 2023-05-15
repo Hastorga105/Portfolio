@@ -19,7 +19,7 @@ import { Pagination, Navigation } from "swiper";
 export default function Projects() {
 
   useEffect(() => {
-    Aos.init({duration:1200});
+    Aos.init({duration:1000});
 }, [])
 
   return (
@@ -63,7 +63,7 @@ export default function Projects() {
 
                         <Grid item >
                           <SwiperSlide sx={{borderRadius: '16px'}}>
-                            <Grid item sx={{ my:10,  }}  data-aos="fade-up" data-aos-delay={idx*500}>
+                            <Grid item sx={{ my:10,  }}  data-aos="fade-right" data-aos-delay={idx*500}>
                               <ProjectItem  id={idx} name={project.name} image={project.image} skills={project.skills}/> 
                             </Grid>
                           </SwiperSlide>

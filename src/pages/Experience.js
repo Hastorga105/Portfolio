@@ -3,18 +3,26 @@ import React from 'react'
 import experience1 from "../assets/MWK.jpg"
 import Box from '@mui/material/Box';
 import { Image } from 'mui-image'
+import Aos from "aos"
+import "aos/dist/aos.css"
+import { useEffect, } from 'react'
 
 
 export default function Experience() {
+  
+  useEffect(() => {
+    Aos.init({duration:1000});
+  }, [])
+
   return (
     <Grid xl={10} lg={12} > 
-      <Typography variant="h2" sx={{fontWeight: 'bold'}} >WORK EXPERIENCE</Typography>
+      <Typography variant="h2" sx={{fontWeight: 'bold'}} data-aos="fade-up">WORK EXPERIENCE</Typography>
       <Grid container sx={{p: 5}} spacing={4}>
-        <Grid item lg={3} md={4} sm={12}>
+        <Grid item lg={3} md={4} sm={12} data-aos="fade-right">
           <Image src={experience1}  />
       </Grid>
 
-        <Grid item lg={9} md={8} sm={12} align="left" >
+        <Grid item lg={9} md={8} sm={12} align="left" data-aos="fade-right" data-aos-delay={200}>
 
           <Typography variant="h4">
           In order to graduate as an IT technician, I had to do an internship, thus, I worked at 

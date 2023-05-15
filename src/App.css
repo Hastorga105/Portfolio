@@ -39,7 +39,7 @@
 
 .shadowGlow{
   transition: 0.2s ease-in-out;
-
+  box-shadow: 0px 0px 0px 0px #00CC65;
 }
 .shadowGlow:hover{
   box-shadow: 0px 0px 50px 25px #00CC65;
@@ -51,6 +51,12 @@
 .transformY:hover{
   transform: translateY(-30px);
 
+}
+.scale{
+  transition: 0.2s cubic-bezier(1,.01,0,1);
+}
+.scale:hover{
+  transform: scale(1.1, 1.1);
 }
 .icon{
   fill:#fff;
@@ -66,4 +72,7 @@
 }
 .text:hover{
   color: #00ff80;
+}
+.textGlow{
+  text-shadow: 0px 0px 10px  #00CC65;
 }

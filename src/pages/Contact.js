@@ -24,8 +24,15 @@ import Popover from '@mui/material/Popover';
 
 import { alpha, styled } from '@mui/material/styles';
 
+import Aos from "aos"
+import "aos/dist/aos.css"
+import { useEffect, } from 'react'
+
 export default function Contact () {
 
+  useEffect(() => {
+    Aos.init({duration:1000});
+  }, [])
   //email
   const form = useRef();
 
@@ -71,9 +78,9 @@ export default function Contact () {
     <>
     
     <Box sx={{ flexGrow: 1, p:{xs:3, xl:0, lg:3} }} align="center" justify = "center" alignItems = "center">
-      <Typography variant="h2" sx={{fontWeight: 'bold'}} >CONTACT ME</Typography> 
-        <Typography variant="h4">Send me an email!</Typography>
-        <Grid container sx={{ py:10}} xl={10}>
+      <Typography variant="h2" sx={{fontWeight: 'bold'}} data-aos="fade-up" >CONTACT ME</Typography> 
+        <Typography variant="h4" data-aos="fade-up" data-aos-delay={200}>Send me an email!</Typography>
+        <Grid container sx={{ py:10}} xl={10} data-aos="fade-right">
           <Grid container item  xl={6} md={6} sm={12} >
             <CardGlow sx={{p:5, borderRadius: 5 }} >
               <form ref={form} onSubmit={sendEmail} id='send'>
